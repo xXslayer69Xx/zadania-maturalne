@@ -1,8 +1,4 @@
-# c++
-*.exe
+# java
+*.class
 .vscode/
 wyniki.txt
-# python
-__pycache__/
-**/python/wyniki.txt
-.vscode/
