@@ -51,5 +51,8 @@ public class zad4_2 {
                 eights++;
             }
         }
+
+        System.out.println("4.2. Liczba liczb podzielnych przez dwa: " + twos + "; "
+                + "Liczba liczb podzielnych przez osiem: " + eights);
     }
 }
