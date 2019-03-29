@@ -5,7 +5,7 @@ import java.util.List;
 
 public class zad4_2 {
 
-    public Boolean isDividedByTwo(String line) {
+    public static Boolean isDividedByTwo(String line) {
 
         if (line.charAt(line.length() - 1) == '0') {
             return true;
@@ -14,7 +14,7 @@ public class zad4_2 {
         }
     }
 
-    public Boolean isDividedByEight(String line) {
+    public static Boolean isDividedByEight(String line) {
 
         if (line.charAt(line.length() - 1) == '0' && line.charAt(line.length() - 2) == '0'
                 && line.charAt(line.length() - 3) == '0') {
@@ -38,5 +38,18 @@ public class zad4_2 {
             line = reader.readLine();
         }
         file.close();
+
+        int twos = 0, eights = 0;
+
+        for (int i = 0; i < content.size(); i++) {
+
+            if (isDividedByTwo(content.get(i))) {
+                twos++;
+            }
+
+            if (isDividedByEight(content.get(i))) {
+                eights++;
+            }
+        }
     }
 }
