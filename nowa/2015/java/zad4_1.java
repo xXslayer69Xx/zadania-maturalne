@@ -49,6 +49,6 @@ public class zad4_1 {
             }
         }
 
-        System.out.println(howMany);
+        System.out.println("4.1. Liczba wierszy, w ktorych jest wiecej zer niz jedynek: " + howMany);
     }
 }
