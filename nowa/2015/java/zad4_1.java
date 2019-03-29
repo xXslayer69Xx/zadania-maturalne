@@ -39,5 +39,15 @@ public class zad4_1 {
             line = reader.readLine();
         }
         file.close();
+
+        int howMany = 0;
+
+        for (int i = 0; i < content.size(); i++) {
+            if (isMoreZeros(content.get(i))) {
+                howMany++;
+            }
+        }
+
+        System.out.println(howMany);
     }
 }
