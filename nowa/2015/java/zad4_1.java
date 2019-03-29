@@ -42,6 +42,7 @@ public class zad4_1 {
 
         int howMany = 0;
 
+        // przechodzenie po zawartości pliku i wywoływanie funkcji isMoreZeros
         for (int i = 0; i < content.size(); i++) {
             if (isMoreZeros(content.get(i))) {
                 howMany++;
