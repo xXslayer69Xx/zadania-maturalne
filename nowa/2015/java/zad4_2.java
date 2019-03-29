@@ -5,6 +5,15 @@ import java.util.List;
 
 public class zad4_2 {
 
+    public Boolean isDividedByTwo(String line) {
+
+        if (line.charAt(line.length() - 1) == '0') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static void main(String[] args) throws Exception {
 
         // wczytywanie danych z pliku
