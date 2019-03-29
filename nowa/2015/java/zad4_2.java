@@ -14,6 +14,16 @@ public class zad4_2 {
         }
     }
 
+    public Boolean isDividedByEight(String line) {
+
+        if (line.charAt(line.length() - 1) == '0' && line.charAt(line.length() - 2) == '0'
+                && line.charAt(line.length() - 3) == '0') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static void main(String[] args) throws Exception {
 
         // wczytywanie danych z pliku
