@@ -37,6 +37,8 @@ public class zad4_3 {
             }
         }
 
+        // System.out.println(theLongests.size());
+
         // znajdowanie najdłuższej serii jedynek z przodu
         int maxOnesInRow = 0, currentMaxOnesInRow = 0;
 
@@ -67,66 +69,63 @@ public class zad4_3 {
                 } else {
                     break;
                 }
+            }
 
-                if (currentMaxOnesInRow == maxOnesInRow) {
-                    theLongestOnes.add(theLongests.get(i));
-                }
+            if (currentMaxOnesInRow == maxOnesInRow) {
+                theLongestOnes.add(theLongests.get(i));
+            }
 
-                currentMaxOnesInRow = 0;
+            currentMaxOnesInRow = 0;
+        }
+
+        System.out.println(theLongestOnes.size());
+
+        // okazało się, że istnieje tylko jedna taka liczba
+        String theLongestOne = theLongestOnes.get(0);
+
+        // znajdowanie numeru wiersza zawierającego największą liczbą
+        int biggestNumber = 0;
+
+        for (int i = 0; i < content.size(); i++) {
+            if (content.get(i).equals(theLongestOne)) {
+                biggestNumber = i + 1;
+                break;
             }
         }
 
-        System.out.println("I'm here!");
-
-        // // okazało się, że istnieje tylko jedna taka liczba
-        // String theLongesOne = theLongestOnes.get(0);
-
-        // // znajdowanie numeru wiersza zawierającego największą liczbą
-        // int biggestNumber = 0;
-
-        // for (int i = 0; i < content.size(); i++) {
-        // if (content.get(i) == theLongesOne) {
-        // biggestNumber = i + 1;
-        // break;
-        // }
-        // }
-
-        // //
         // -------------------------------------------------------------------------------
 
-        // // znajdowanie minimalnej długości liczby
-        // int minLength = 10000;
+        // znajdowanie minimalnej długości liczby
+        int minLength = 10000;
 
-        // for (int i = 0; i < content.size(); i++) {
-        // if (content.get(i).length() < minLength) {
-        // minLength = content.get(i).length();
-        // }
-        // }
+        for (int i = 0; i < content.size(); i++) {
+            if (content.get(i).length() < minLength) {
+                minLength = content.get(i).length();
+            }
+        }
 
-        // // znajdowanie liczb o najmniejszej długości
-        // List<String> theSmallest = new ArrayList<String>();
+        // znajdowanie liczb o najmniejszej długości
+        List<String> theSmallest = new ArrayList<String>();
 
-        // for (int i = 0; i < content.size(); i++) {
-        // if (content.get(i).length() == minLength) {
-        // theSmallest.add(content.get(i));
-        // }
-        // }
+        for (int i = 0; i < content.size(); i++) {
+            if (content.get(i).length() == minLength) {
+                theSmallest.add(content.get(i));
+            }
+        }
 
-        // // okazało się, że zostało 5 liczb, z których możemy wywnioskować, że liczb
-        // 100
-        // // jest najmniejsza
+        // okazało się, że zostało 5 liczb, z których możemy wywnioskować, że liczba 100
+        // jest najmniejsza
 
-        // // znajdowanie numeru wiersza zawierającego najmniejszą liczbę
-        // int smallestNumber = 0;
+        // znajdowanie numeru wiersza zawierającego najmniejszą liczbę
+        int smallestNumber = 0;
 
-        // for (int i = 0; i < content.size(); i++) {
-        // if (content.get(i) == "100") {
-        // smallestNumber = i + 1;
-        // }
-        // }
+        for (int i = 0; i < content.size(); i++) {
+            if (content.get(i).equals("100")) {
+                smallestNumber = i + 1;
+            }
+        }
 
-        // System.out.println("4.3. Numer wiersza zawierajacy najwieksza liczbe: " +
-        // biggestNumber
-        // + "; Numer wiersza zawierajacy najwieksza liczbe: " + smallestNumber);
+        System.out.println("4.3. Numer wiersza zawierajacy najwieksza liczbe: " + biggestNumber
+                + "; Numer wiersza zawierajacy najwieksza liczbe: " + smallestNumber);
     }
 }
